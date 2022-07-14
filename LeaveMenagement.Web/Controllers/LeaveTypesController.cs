@@ -7,11 +7,12 @@ using AutoMapper;
 using LeaveMenagement.Web.Models;
 using LeaveMenagement.Web.Data;
 using LeaveMenagement.Web.Contracts;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LeaveManagement.Web.Controllers
 {
-  
 
+    [Authorize]
     public class LeaveTypesController : Controller
     {
         private readonly ILeaveTypeRepository? leaveTypeRepository;
